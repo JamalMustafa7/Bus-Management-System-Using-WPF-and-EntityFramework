@@ -1,0 +1,25 @@
+﻿<Window x:Class="EAD_Final_Project.Guard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Guard" Height="450" Width="800" Background="#F0F0F0">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header Background -->
+        <Border Background="#007ACC" Grid.Row="0" VerticalAlignment="Stretch"/>
+
+        <!-- Header Buttons -->
+        <StackPanel Orientation="Horizontal" Grid.Row="0" VerticalAlignment="Center" Margin="10">
+            <Button Content="Vehicle IN" Padding="10" FontSize="16" FontWeight="SemiBold" Click="vehicleIn" Margin="5" Background="#007ACC" BorderBrush="#3776EC" Foreground="White"/>
+            <Button Content="Vehicle OUT" Padding="10" FontSize="16" FontWeight="SemiBold" Click="vehicleOut" Margin="5" Background="#007ACC" BorderBrush="#3776EC" Foreground="White"/>
+            <Button Content="Log Out" Padding="10" FontSize="16" FontWeight="SemiBold" Margin="5" Background="#007ACC" BorderBrush="#3776EC" Foreground="White" Click="Logout"/>
+
+        </StackPanel>
+
+        <!-- Frame to Host Pages -->
+        <Frame Grid.Row="1" Name="frame" NavigationUIVisibility="Hidden" Source="GuardPages/Initial.xaml"/>
+    </Grid>
+</Window>
